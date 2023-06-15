@@ -12,8 +12,26 @@ class TextLearnView extends StatelessWidget {
       appBar: AppBar(title: Text(titleApp)),
       body: Center(
           child: Column(
-        children: [Text(data), Text(data2)],
+        children: [
+          Text(
+            data,
+            style: ProjectStyles.welcomeStyle,
+          ),
+          Text(data2)
+        ],
       )),
     );
   }
+}
+
+class ProjectStyles {
+  static TextStyle welcomeStyle = const TextStyle(
+    wordSpacing: 2,
+    decoration: TextDecoration.underline,
+    fontStyle: FontStyle.normal,
+    letterSpacing: 2,
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+    color: Colors.lime,
+  );
 }
