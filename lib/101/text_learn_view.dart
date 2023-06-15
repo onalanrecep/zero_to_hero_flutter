@@ -13,6 +13,21 @@ class TextLearnView extends StatelessWidget {
       body: Center(
           child: Column(
         children: [
+          Text.rich(
+            TextSpan(
+              text: 'Hello',
+              style: ProjectStyles.spanStyle, // default text style
+              children: <TextSpan>[
+                const TextSpan(
+                    text: ' beautiful ',
+                    style: TextStyle(fontStyle: FontStyle.italic)),
+                TextSpan(
+                  text: 'world',
+                  style: ProjectStyles.spanStyle,
+                )
+              ],
+            ),
+          ),
           Text(
             data,
             style: ProjectStyles.welcomeStyle,
@@ -33,5 +48,8 @@ class ProjectStyles {
     fontWeight: FontWeight.w600,
     fontSize: 20,
     color: Colors.lime,
+  );
+  static TextStyle spanStyle = const TextStyle(
+    color: Colors.blueGrey,
   );
 }
