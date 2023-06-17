@@ -24,6 +24,16 @@ class TextLearnView extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             style: ProjectStyles.icerikStyle,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            icerik * 10,
+            style: Theme.of(context)
+                .textTheme
+                .headlineSmall
+                ?.copyWith(color: Colors.pinkAccent),
           )
         ],
       )),
