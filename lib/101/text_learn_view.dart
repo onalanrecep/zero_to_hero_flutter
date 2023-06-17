@@ -5,34 +5,26 @@ class TextLearnView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String data = 'Merhaba Dostum';
-    String data2 = 'Hadi canım';
-    String titleApp = 'Haydi Merhaba';
+    String baslik = 'Flutter\'da Metinler';
+    String icerik = 'Metinleri güzel öğren';
+    String titleApp = 'TextLearnView';
     return Scaffold(
       appBar: AppBar(title: Text(titleApp)),
       body: Center(
           child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text.rich(
-            TextSpan(
-              text: 'Hello',
-              style: ProjectStyles.spanStyle, // default text style
-              children: <TextSpan>[
-                const TextSpan(
-                    text: ' beautiful ',
-                    style: TextStyle(fontStyle: FontStyle.italic)),
-                TextSpan(
-                  text: 'world',
-                  style: ProjectStyles.spanStyle,
-                )
-              ],
-            ),
-          ),
           Text(
-            data,
+            baslik,
             style: ProjectStyles.welcomeStyle,
           ),
-          Text(data2)
+          Text(
+            icerik * 10,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
+            style: ProjectStyles.icerikStyle,
+          )
         ],
       )),
     );
@@ -47,9 +39,10 @@ class ProjectStyles {
     letterSpacing: 2,
     fontWeight: FontWeight.w600,
     fontSize: 20,
-    color: Colors.lime,
+    color: Colors.black87,
   );
-  static TextStyle spanStyle = const TextStyle(
-    color: Colors.blueGrey,
+  static TextStyle icerikStyle = const TextStyle(
+    color: Colors.black,
+    fontSize: 14,
   );
 }
