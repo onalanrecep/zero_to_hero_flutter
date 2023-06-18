@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zero_to_hero_flutter/101/text_learn_view.dart';
+import 'package:zero_to_hero_flutter/101/container_sized_box_learn.dart';
+//import 'package:zero_to_hero_flutter/101/text_learn_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,6 +11,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: TextLearnView());
+    return MaterialApp(
+        title: 'FlutterDemo',
+        theme: ThemeData.dark(),
+        debugShowCheckedModeBanner: false,
+        home: ContainerSizedBoxLearn());
   }
 }

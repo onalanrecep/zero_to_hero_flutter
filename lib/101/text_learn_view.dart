@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class TextLearnView extends StatelessWidget {
-  const TextLearnView({super.key});
-
+  TextLearnView({super.key, this.userName});
+  final String? userName;
+  final ProjectKeys keys = ProjectKeys();
   @override
   Widget build(BuildContext context) {
+    //const String userName = 'Reko';
     String baslik = 'Flutter\'da Metinler';
     String icerik = 'Metinleri güzel öğren';
     String titleApp = 'TextLearnView';
@@ -29,12 +31,16 @@ class TextLearnView extends StatelessWidget {
             height: 10,
           ),
           Text(
-            icerik * 10,
+            userName ?? 'Kullanıcı Tanımsız',
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall
-                ?.copyWith(color: Colors.pinkAccent),
-          )
+                ?.copyWith(color: ProjectColors.projeRenk),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(keys.welcome),
         ],
       )),
     );
@@ -43,16 +49,23 @@ class TextLearnView extends StatelessWidget {
 
 class ProjectStyles {
   static TextStyle welcomeStyle = const TextStyle(
-    wordSpacing: 2,
-    decoration: TextDecoration.underline,
-    fontStyle: FontStyle.normal,
-    letterSpacing: 2,
-    fontWeight: FontWeight.w600,
-    fontSize: 20,
-    color: Colors.black87,
-  );
+      wordSpacing: 2,
+      decoration: TextDecoration.underline,
+      fontStyle: FontStyle.normal,
+      letterSpacing: 2,
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+      color: Colors.amber);
   static TextStyle icerikStyle = const TextStyle(
-    color: Colors.black,
+    color: Colors.green,
     fontSize: 14,
   );
+}
+
+class ProjectColors {
+  static Color projeRenk = Colors.yellowAccent;
+}
+
+class ProjectKeys {
+  String welcome = 'Hello';
 }
