@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zero_to_hero_flutter/101/container_sized_box_learn.dart';
+
+import '101/scaffold_learn.dart';
 //import 'package:zero_to_hero_flutter/101/text_learn_view.dart';
 
 void main() {
@@ -15,6 +17,6 @@ class MainApp extends StatelessWidget {
         title: 'FlutterDemo',
         theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
-        home: ContainerSizedBoxLearn());
+        home: const ScaffoldLearnView());
   }
 }
