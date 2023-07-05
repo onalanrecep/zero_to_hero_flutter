@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:zero_to_hero_flutter/101/color_learn.dart';
 //import 'package:zero_to_hero_flutter/101/app_bar_learn.dart';
 //import 'package:zero_to_hero_flutter/101/button_learn.dart';
-import 'package:zero_to_hero_flutter/101/icon_learn.dart';
+//import 'package:zero_to_hero_flutter/101/icon_learn.dart';
 //import 'package:zero_to_hero_flutter/101/container_sized_box_learn.dart';
 
 //import '101/scaffold_learn.dart';
@@ -27,6 +28,6 @@ class MainApp extends StatelessWidget {
           systemOverlayStyle: SystemUiOverlayStyle.light,
         )),
         debugShowCheckedModeBanner: false,
-        home: IconLearnView());
+        home: const ColorLearnView());
   }
 }
