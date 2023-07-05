@@ -40,7 +40,7 @@ class ButtonLearn extends StatelessWidget {
           ),
           Container(
             height: 200,
-            color: Colors.white,
+            color: Colors.grey,
           ),
           const SizedBox(height: 10),
           ElevatedButton(
