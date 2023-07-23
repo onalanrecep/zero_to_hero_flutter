@@ -9,7 +9,8 @@ class StatlessLearn extends StatelessWidget {
       appBar: AppBar(),
       body: const Column(children: [
         TitleTextWidget(text: "Reko"),
-        TitleTextWidget(text: "Nuro")
+        TitleTextWidget(text: "Nuro"),
+        TitleTextWidget(text: "Hüso")
       ]),
     );
   }
