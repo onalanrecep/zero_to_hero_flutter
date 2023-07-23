@@ -29,7 +29,8 @@ class PaddingLearn extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: ProjectPadding.pagePaddingVerHor,
+                padding: ProjectPadding.pagePaddingHorizontal +
+                    ProjectPadding.pagePaddingVertical,
                 child: Container(
                   color: Colors.white,
                   height: 200,
@@ -54,6 +55,4 @@ class ProjectPadding {
   static const pagePaddingHorizontal = EdgeInsets.symmetric(horizontal: 10);
   static const pagePaddingVertical = EdgeInsets.symmetric(vertical: 10);
   static const pagePaddingRightOnly = EdgeInsets.only(right: 20);
-  static const pagePaddingVerHor =
-      EdgeInsets.symmetric(horizontal: 10, vertical: 10);
 }
