@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:zero_to_hero_flutter/101/custom_widget_learn.dart';
+//import 'package:zero_to_hero_flutter/101/custom_widget_learn.dart';
+import 'package:zero_to_hero_flutter/101/indicator_learn.dart';
 //import 'package:zero_to_hero_flutter/101/card_learn.dart';
 //import 'package:zero_to_hero_flutter/demos/note_demos_view.dart';
 //import 'package:zero_to_hero_flutter/101/padding_learn.dart';
@@ -25,13 +26,16 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         title: 'FlutterDemo',
         theme: ThemeData.dark().copyWith(
+            progressIndicatorTheme: const ProgressIndicatorThemeData(
+              color: Colors.white,
+            ),
             appBarTheme: const AppBarTheme(
-          centerTitle: true,
-          backgroundColor: Colors.black12,
-          elevation: 3,
-          systemOverlayStyle: SystemUiOverlayStyle.light,
-        )),
+              centerTitle: true,
+              backgroundColor: Colors.black12,
+              elevation: 3,
+              systemOverlayStyle: SystemUiOverlayStyle.light,
+            )),
         debugShowCheckedModeBanner: false,
-        home: const CustomWidgetLearn());
+        home: const IndicatorLearn());
   }
 }
