@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:zero_to_hero_flutter/101/card_learn.dart';
-import 'package:zero_to_hero_flutter/demos/note_demos_view.dart';
+import 'package:zero_to_hero_flutter/101/custom_widget_learn.dart';
+//import 'package:zero_to_hero_flutter/101/card_learn.dart';
+//import 'package:zero_to_hero_flutter/demos/note_demos_view.dart';
 //import 'package:zero_to_hero_flutter/101/padding_learn.dart';
 //import 'package:zero_to_hero_flutter/101/color_learn.dart';
 //import 'package:zero_to_hero_flutter/101/stateless_learn.dart';
@@ -31,6 +32,6 @@ class MainApp extends StatelessWidget {
           systemOverlayStyle: SystemUiOverlayStyle.light,
         )),
         debugShowCheckedModeBanner: false,
-        home: const NoteDemos());
+        home: const CustomWidgetLearn());
   }
 }

@@ -14,10 +14,7 @@ class NoteDemos extends StatelessWidget {
         padding: PaddingItems.horizontalPadding,
         child: Column(
           children: [
-            Image.network(
-              "https://cdn03.ciceksepeti.com/cicek/kcm30228480-1/L/to-do-list-bear-not-defteri-kcm30228480-1-c21a8cc0124646e088a394e8d7f58379.jpg",
-              width: double.infinity,
-            ),
+            const Resim(),
             _TitleWidget(titleNote: _titleNote),
             const Padding(
               padding: PaddingItems.verticalPadding,
@@ -42,10 +39,22 @@ class NoteDemos extends StatelessWidget {
   }
 }
 
-class _SubTitleWidget extends StatelessWidget {
-  const _SubTitleWidget({
+class Resim extends StatelessWidget {
+  const Resim({
     super.key,
   });
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.network(
+      "https://cdn03.ciceksepeti.com/cicek/kcm30228480-1/L/to-do-list-bear-not-defteri-kcm30228480-1-c21a8cc0124646e088a394e8d7f58379.jpg",
+      width: double.infinity,
+    );
+  }
+}
+
+class _SubTitleWidget extends StatelessWidget {
+  const _SubTitleWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +70,6 @@ class _SubTitleWidget extends StatelessWidget {
 
 class _TitleWidget extends StatelessWidget {
   const _TitleWidget({
-    super.key,
     required this.titleNote,
   });
 

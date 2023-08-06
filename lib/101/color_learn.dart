@@ -13,14 +13,12 @@ class ColorLearnView extends StatelessWidget {
             color: ColorItems.sulu,
             child: const Text('Data'),
           ),
-          Container(
-            child: Text(
-              'Data',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium
-                  ?.copyWith(color: Theme.of(context).colorScheme.error),
-            ),
+          Text(
+            'Data',
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: Theme.of(context).colorScheme.error),
           )
         ],
       ),
