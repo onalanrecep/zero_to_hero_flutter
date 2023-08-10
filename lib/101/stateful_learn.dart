@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zero_to_hero_flutter/product/counter_hello_button.dart';
+import 'package:zero_to_hero_flutter/product/language/languageItems.dart';
 
 class StatefulLearn extends StatefulWidget {
   const StatefulLearn({super.key});
@@ -10,7 +11,6 @@ class StatefulLearn extends StatefulWidget {
 
 class _StatefulLearnState extends State<StatefulLearn> {
   int _countValue = 0;
-  int _counterCustom = 0;
 
   void _updateCounter(bool isIncrement) {
     if (isIncrement) {
@@ -25,7 +25,7 @@ class _StatefulLearnState extends State<StatefulLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Stateful Learn'),
+        title: Text(LanguageItems.welcemeTitle),
       ),
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
