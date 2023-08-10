@@ -28,7 +28,7 @@ class _PageViewLearnState extends State<PageViewLearn> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(_currentPageIndex.toString()),
-            Spacer(),
+            const Spacer(),
             FloatingActionButton(
               onPressed: () {
                 _pageController.previousPage(
@@ -59,5 +59,5 @@ class _PageViewLearnState extends State<PageViewLearn> {
 }
 
 class _DurationUtility {
-  static const _durationLow = const Duration(seconds: 1);
+  static const _durationLow = Duration(seconds: 1);
 }
