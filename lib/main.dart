@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:zero_to_hero_flutter/101/statefull_life_cycle_learn.dart';
+import 'package:zero_to_hero_flutter/101/text_field_learn.dart';
 //import 'package:zero_to_hero_flutter/101/column_row_learn.dart';
 //import 'package:zero_to_hero_flutter/101/stateful_learn.dart';
 
@@ -42,8 +43,6 @@ class MainApp extends StatelessWidget {
               systemOverlayStyle: SystemUiOverlayStyle.light,
             )),
         debugShowCheckedModeBanner: false,
-        home: const StatefullLifeCycleLearn(
-          message: "Velibb",
-        ));
+        home: const TextFieldLearn());
   }
 }
