@@ -14,8 +14,14 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
       appBar: AppBar(
         title: const Text('Text Field Learn'),
       ),
-      body: const TextField(
-        decoration: InputDecoration(
+      body: TextField(
+        buildCounter: (BuildContext context,
+            {int? currentLength, bool? isFocused, int? maxLength}) {
+          return _animatedContainer(currentLength);
+        },
+        keyboardType: TextInputType.emailAddress,
+        autofillHints: const [AutofillHints.email],
+        decoration: const InputDecoration(
             prefix: Icon(Icons.mail),
             border: OutlineInputBorder(),
             labelText: 'Mail'),
@@ -23,4 +29,13 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
       ),
     );
   }
+}
+
+AnimatedContainer _animatedContainer(int? currentLength) {
+  return AnimatedContainer(
+    duration: const Duration(seconds: 1),
+    height: 10,
+    width: 10.0 * (currentLength ?? 0),
+    color: Colors.green,
+  );
 }
