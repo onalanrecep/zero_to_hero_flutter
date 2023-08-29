@@ -26,9 +26,29 @@ class _ListViewLearnState extends State<ListViewLearn> {
           height: 300,
         ),
         const Divider(),
-        Container(
-          color: Colors.green,
+        SizedBox(
           height: 300,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Container(
+                color: Colors.green,
+                width: 100,
+              ),
+              Container(
+                color: Colors.white,
+                width: 100,
+              ),
+              Container(
+                color: Colors.green,
+                width: 100,
+              ),
+              Container(
+                color: Colors.white,
+                width: 100,
+              )
+            ],
+          ),
         ),
         IconButton(onPressed: () {}, icon: const Icon(Icons.close))
       ]),
