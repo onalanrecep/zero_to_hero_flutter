@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:zero_to_hero_flutter/demos/my_collections_demos.dart';
+import 'package:zero_to_hero_flutter/101/navigation_learn.dart';
+//import 'package:zero_to_hero_flutter/demos/my_collections_demos.dart';
 //import 'package:zero_to_hero_flutter/101/list_view_learnd.dart';
 //import 'package:zero_to_hero_flutter/101/statefull_life_cycle_learn.dart';
 //import 'package:zero_to_hero_flutter/101/text_field_learn.dart';
@@ -49,6 +50,6 @@ class MainApp extends StatelessWidget {
               systemOverlayStyle: SystemUiOverlayStyle.light,
             )),
         debugShowCheckedModeBanner: false,
-        home: const MyCollectionsDemos());
+        home: const NavigationLearn());
   }
 }
